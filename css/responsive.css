@@ -151,9 +151,15 @@
 
   /* Footer */
   .footer-top {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr; /* Cambiado a 2 columnas */
+    gap: 1.5rem;
+    text-align: left; /* Alineado a la izquierda */
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1; /* Ocupa toda la fila superior */
     text-align: center;
+    margin-bottom: 1rem;
   }
 
   .footer-brand .brand-avatar {
@@ -165,8 +171,8 @@
   }
 
   .footer-col h4::after {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0; /* Subrayado a la izquierda */
+    transform: none;
   }
 
   .footer-bottom {
