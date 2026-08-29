@@ -71,64 +71,66 @@
 }
 
 /* ==========================================================================
-   MODO OSCURO — Negro neutro puro, acentos rosa originales
+   MODO OSCURO — Negro neutro puro automático según sistema
    ========================================================================== */
-[data-theme="dark"] {
-  --bg-cream: #0B0B0B;
-  --bg-cream-soft: #111111;
-  --bg-card: #151515;
-  --bg-card-solid: #1A1A1A;
-  --bg-section-alt: #0F0F0F;
-  --bg-custom-callout: linear-gradient(135deg, #111111 0%, #1A1A1A 50%, #111111 100%);
-  --bg-featured: linear-gradient(180deg, #0B0B0B 0%, #121212 50%, #0B0B0B 100%);
-  --bg-header-scrolled: #0B0B0B;
-  --bg-input: #111111;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-cream: #0B0B0B;
+    --bg-cream-soft: #111111;
+    --bg-card: #151515;
+    --bg-card-solid: #1A1A1A;
+    --bg-section-alt: #0F0F0F;
+    --bg-custom-callout: linear-gradient(135deg, #111111 0%, #1A1A1A 50%, #111111 100%);
+    --bg-featured: linear-gradient(180deg, #0B0B0B 0%, #121212 50%, #0B0B0B 100%);
+    --bg-header-scrolled: #0B0B0B;
+    --bg-input: #111111;
 
-  /* Rosa — mismos acentos de marca, ligeramente más vivos para contraste */
-  --rose-50: #1C1215;
-  --rose-100: #2A1820;
-  --rose-200: #5C2D3A;
-  --rose-300: #E69DA8;
-  --rose-400: #DF8294;
-  --rose-500: #CE657C;
-  --rose-600: #F09AAD;
+    /* Rosa — mismos acentos de marca, ligeramente más vivos para contraste */
+    --rose-50: #1C1215;
+    --rose-100: #2A1820;
+    --rose-200: #5C2D3A;
+    --rose-300: #E69DA8;
+    --rose-400: #DF8294;
+    --rose-500: #CE657C;
+    --rose-600: #F09AAD;
 
-  /* Verde Salvia */
-  --sage-50: #121612;
-  --sage-100: #1A251A;
-  --sage-200: #2E442E;
-  --sage-400: #8AB584;
-  --sage-600: #9DC896;
-  --sage-800: #B8DDB4;
+    /* Verde Salvia */
+    --sage-50: #121612;
+    --sage-100: #1A251A;
+    --sage-200: #2E442E;
+    --sage-400: #8AB584;
+    --sage-600: #9DC896;
+    --sage-800: #B8DDB4;
 
-  /* Texto — blanco y grises claros */
-  --earth-900: #FFFFFF;
-  --earth-800: #E5E5E5;
-  --earth-600: #B0B0B0;
-  --earth-400: #808080;
-  --earth-200: #333333;
-  --earth-100: #222222;
+    /* Texto — blanco y grises claros */
+    --earth-900: #FFFFFF;
+    --earth-800: #E5E5E5;
+    --earth-600: #B0B0B0;
+    --earth-400: #808080;
+    --earth-200: #333333;
+    --earth-100: #222222;
 
-  /* Bordes */
-  --border-light: rgba(206, 101, 124, 0.25);
-  --border-card: #2A2A2A;
-  --border-subtle: #222222;
+    /* Bordes */
+    --border-light: rgba(206, 101, 124, 0.25);
+    --border-card: #2A2A2A;
+    --border-subtle: #222222;
 
-  /* Sombras */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
-  --shadow-hover: 0 20px 48px rgba(206, 101, 124, 0.2);
-}
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
+    --shadow-hover: 0 20px 48px rgba(206, 101, 124, 0.2);
+  }
 
-/* En modo oscuro, fondo sólido negro sin gradientes claros */
-[data-theme="dark"] body {
-  background-color: #0B0B0B !important;
-  background-image: none !important;
-}
+  /* En modo oscuro, fondo sólido negro sin gradientes claros */
+  body {
+    background-color: #0B0B0B !important;
+    background-image: none !important;
+  }
 
-[data-theme="dark"] body::before {
-  display: none !important;
+  body::before {
+    display: none !important;
+  }
 }
 
 /* Las imágenes NUNCA se alteran */
