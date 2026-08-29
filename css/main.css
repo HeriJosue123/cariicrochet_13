@@ -479,8 +479,8 @@ section {
    HERO / PORTADA
    ========================================================================== */
 .hero-section {
-  padding-top: 7rem;
-  padding-bottom: 5.5rem;
+  padding-top: 4rem; /* Reduced since it's no longer at the very top */
+  padding-bottom: 4rem;
   position: relative;
   overflow: hidden;
 }

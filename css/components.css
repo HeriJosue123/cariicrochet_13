@@ -8,13 +8,12 @@
 .home-slider-section {
   position: relative;
   width: 100%;
-  min-height: 60vh;
-  margin-top: 1.5rem; /* Separación del hero original */
-  margin-bottom: 3rem;
+  min-height: 85vh; /* Taller since it's the main header now */
+  margin-top: 0; /* Remove top margin so it goes to the top */
+  padding-top: 4rem; /* Padding to account for the header */
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-top: 1px solid var(--border-card);
   border-bottom: 1px solid var(--border-card);
 }
 
