@@ -588,6 +588,7 @@ section {
 /* Showcase visual del Hero con fotos reales */
 .hero-visual {
   position: relative;
+  margin-top: 2rem; /* Bajamos la imagen un poquito para que no choque con el texto superior */
 }
 
 .hero-card-stack {

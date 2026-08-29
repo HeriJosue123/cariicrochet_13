@@ -10,39 +10,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('themeToggle');
 
   // ==========================================================================
-  // 1. GESTOR DE TEMA (MODO OSCURO / CLARO) CON LOCALSTORAGE
+  // 1. GESTOR DE CARRUSEL DE DESTAQUES
   // ==========================================================================
-  const savedTheme = localStorage.getItem('cari_theme');
-  const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+  const slides = document.querySelectorAll('.home-slide');
+  const dots = document.querySelectorAll('.hslider-dot');
+  let currentSlide = 0;
+  let slideInterval;
 
-  applyTheme(initialTheme);
-
-  function applyTheme(theme) {
-    if (theme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('cari_theme', 'dark');
-      updateThemeIcon('☀️');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('cari_theme', 'light');
-      updateThemeIcon('🌙');
+  if (slides.length > 0 && dots.length > 0) {
+    function goToSlide(n) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
     }
-  }
 
-  function toggleTheme() {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    applyTheme(isDark ? 'light' : 'dark');
-  }
-
-  function updateThemeIcon(icon) {
-    if (themeToggle) {
-      const iconEl = themeToggle.querySelector('.theme-icon');
-      if (iconEl) iconEl.textContent = icon;
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
     }
-  }
 
-  if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+    // Auto play (pasa más despacio: cada 8 segundos)
+    function startSlider() {
+      slideInterval = setInterval(nextSlide, 8000);
+    }
+
+    function resetSliderInterval() {
+      clearInterval(slideInterval);
+      startSlider();
+    }
+
+    // Eventos en los puntitos
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        resetSliderInterval();
+      });
+    });
+
+    startSlider();
+  }
 
   // ==========================================================================
   // 2. EFECTO SCROLL EN HEADER
