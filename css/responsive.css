@@ -99,8 +99,8 @@
     width: 82%;
     max-width: 320px;
     height: 100vh;
-    background: #FFFFFF;
-    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
+    background: var(--bg-card-solid);
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.25);
     flex-direction: column;
     align-items: flex-start;
     padding: 5.5rem 2rem 2rem 2rem;
@@ -116,22 +116,52 @@
   .nav-link {
     font-size: 1.15rem;
     font-weight: 600;
+    color: var(--earth-900);
   }
 
   .nav-actions .btn {
-    display: none; /* Ocultar el botón pequeño del navbar en móvil para usar el del hero */
+    display: none; /* Ocultar el botón grande de pedido en navbar móvil */
   }
 
-  /* Menú overlay */
+  .mobile-theme-item {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .mobile-theme-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-cream-soft);
+    border: 1.5px solid var(--border-light);
+    color: var(--earth-900);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .mobile-theme-btn:hover {
+    background: var(--rose-100);
+    border-color: var(--rose-400);
+  }
+
+  /* Menú overlay semitransparente completamente NÍTIDO (sin blur) */
   .mobile-nav-backdrop {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.45);
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transition: all var(--transition-fast);
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+    cursor: pointer;
   }
 
   .mobile-nav-backdrop.open {
