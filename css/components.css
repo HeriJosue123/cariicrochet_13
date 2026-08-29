@@ -853,9 +853,7 @@
 .lightbox-modal {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(10, 8, 8, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.94);
   z-index: 2000;
   display: flex;
   align-items: center;
@@ -977,8 +975,7 @@
 .order-modal {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(20, 15, 14, 0.75);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.65);
   z-index: 2000;
   display: flex;
   align-items: center;
