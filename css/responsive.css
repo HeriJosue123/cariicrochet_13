@@ -123,8 +123,20 @@
 
   /* Callout personalizado */
   .custom-order-section {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.25rem; /* Reduced padding for narrow screens */
     margin: 2rem auto;
+    overflow-wrap: break-word; /* Prevent text overflow */
+  }
+
+  .custom-order-content h2 {
+    font-size: 2rem; /* Ensure it fits narrow screens */
+  }
+
+  .btn {
+    white-space: normal; /* Allow long button text to wrap */
+    height: auto;
+    padding: 0.85rem 1rem;
+    text-align: center;
   }
 
   /* Contacto */

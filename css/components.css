@@ -103,15 +103,24 @@
   border-color: var(--rose-200);
 }
 
-.pillar-icon {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
+.pillar-img-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  border: 2px solid var(--rose-200);
 }
 
-.pillar-card h4 {
+.pillar-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pillar-card h3 {
   font-size: 1.05rem;
   color: var(--earth-900);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
 }
 
 .pillar-card p {
