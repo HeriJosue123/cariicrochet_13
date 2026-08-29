@@ -4,21 +4,22 @@
    ========================================================================== */
 
 :root {
-  /* Paleta de Color Artesanal & Delicada (Modo Claro) */
-  --bg-cream: #FAF7F2;
-  --bg-cream-soft: #F4EFE6;
-  --bg-card: rgba(255, 255, 255, 0.85);
+  /* ======== MODO CLARO — Blanco puro ======== */
+  --bg-cream: #FFFFFF;
+  --bg-cream-soft: #F8F8F8;
+  --bg-card: #FFFFFF;
   --bg-card-solid: #FFFFFF;
-  --bg-section-alt: rgba(255, 255, 255, 0.6);
-  --bg-custom-callout: linear-gradient(135deg, #FFF9F7 0%, #F7E2E5 50%, #F5F7F3 100%);
-  --bg-featured: linear-gradient(180deg, var(--bg-cream) 0%, #FCF4F5 50%, var(--bg-cream) 100%);
-  --bg-header-scrolled: rgba(250, 247, 242, 0.92);
-  --bg-input: #FAF7F2;
-  
-  /* Tonos Rosa y Rubor */
-  --rose-50: #FCF4F5;
-  --rose-100: #F7E2E5;
+  --bg-section-alt: #FAFAFA;
+  --bg-custom-callout: linear-gradient(135deg, #FFF5F6 0%, #FEE8EC 50%, #F5F8F4 100%);
+  --bg-featured: linear-gradient(180deg, #FFFFFF 0%, #FFF5F6 50%, #FFFFFF 100%);
+  --bg-header-scrolled: #FFFFFF;
+  --bg-input: #F8F8F8;
+
+  /* Tonos Rosa y Rubor (acentos de marca) */
+  --rose-50: #FFF5F6;
+  --rose-100: #FEE8EC;
   --rose-200: #EEBAC2;
+  --rose-300: #E69DA8;
   --rose-400: #DF8294;
   --rose-500: #CE657C;
   --rose-600: #B54A63;
@@ -31,18 +32,18 @@
   --sage-600: #577353;
   --sage-800: #3B4F38;
 
-  /* Tonos Tierra & Café Cálido */
-  --earth-900: #2E2322;
-  --earth-800: #423533;
-  --earth-600: #6B5754;
-  --earth-400: #9C8581;
-  --earth-200: #D8CCC9;
-  --earth-100: #EFE9E7;
+  /* Tonos Tierra & Texto */
+  --earth-900: #1A1A1A;
+  --earth-800: #333333;
+  --earth-600: #666666;
+  --earth-400: #999999;
+  --earth-200: #D5D5D5;
+  --earth-100: #EBEBEB;
 
-  /* Bordes y acentos */
-  --border-light: rgba(238, 186, 194, 0.35);
-  --border-card: rgba(226, 234, 224, 0.9);
-  --border-subtle: #EFE9E7;
+  /* Bordes */
+  --border-light: rgba(206, 101, 124, 0.2);
+  --border-card: #EBEBEB;
+  --border-subtle: #F0F0F0;
 
   --warm-gold: #D4A373;
   --warm-amber: #E29578;
@@ -53,9 +54,9 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Sombras */
-  --shadow-sm: 0 2px 8px rgba(66, 53, 51, 0.04);
-  --shadow-md: 0 8px 24px rgba(66, 53, 51, 0.07);
-  --shadow-lg: 0 16px 40px rgba(66, 53, 51, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 20px 48px rgba(206, 101, 124, 0.15);
 
   --radius-sm: 8px;
@@ -70,57 +71,59 @@
 }
 
 /* ==========================================================================
-   MODO OSCURO (Paleta Cálida, Sólida y Nítida en Dark Theme)
+   MODO OSCURO — Negro neutro puro, acentos rosa originales
    ========================================================================== */
 [data-theme="dark"] {
-  --bg-cream: #140E0E;
-  --bg-cream-soft: #1E1616;
-  --bg-card: #201717;
-  --bg-card-solid: #221818;
-  --bg-section-alt: #181111;
-  --bg-custom-callout: linear-gradient(135deg, #221517 0%, #2D1B1E 50%, #162018 100%);
-  --bg-featured: linear-gradient(180deg, #140E0E 0%, #201416 50%, #140E0E 100%);
-  --bg-header-scrolled: #140E0E;
-  --bg-input: #1A1212;
+  --bg-cream: #0B0B0B;
+  --bg-cream-soft: #111111;
+  --bg-card: #151515;
+  --bg-card-solid: #1A1A1A;
+  --bg-section-alt: #0F0F0F;
+  --bg-custom-callout: linear-gradient(135deg, #111111 0%, #1A1A1A 50%, #111111 100%);
+  --bg-featured: linear-gradient(180deg, #0B0B0B 0%, #121212 50%, #0B0B0B 100%);
+  --bg-header-scrolled: #0B0B0B;
+  --bg-input: #111111;
 
-  /* Tonos Rosa y Rubor en Modo Oscuro (Vivos y luminosos) */
-  --rose-50: #29181B;
-  --rose-100: #3E2026;
-  --rose-200: #6B343F;
-  --rose-400: #F08CA0;
-  --rose-500: #F3728D;
-  --rose-600: #FFA8BA;
+  /* Rosa — mismos acentos de marca, ligeramente más vivos para contraste */
+  --rose-50: #1C1215;
+  --rose-100: #2A1820;
+  --rose-200: #5C2D3A;
+  --rose-300: #E69DA8;
+  --rose-400: #DF8294;
+  --rose-500: #CE657C;
+  --rose-600: #F09AAD;
 
-  /* Tonos Verde Salvia en Modo Oscuro */
-  --sage-50: #182219;
-  --sage-100: #233325;
-  --sage-200: #3B543D;
-  --sage-400: #93BC8D;
-  --sage-600: #A8CFA2;
-  --sage-800: #C2E8BC;
+  /* Verde Salvia */
+  --sage-50: #121612;
+  --sage-100: #1A251A;
+  --sage-200: #2E442E;
+  --sage-400: #8AB584;
+  --sage-600: #9DC896;
+  --sage-800: #B8DDB4;
 
-  /* Tonos Tierra y Textos en Modo Oscuro (Alto contraste y nitidez) */
+  /* Texto — blanco y grises claros */
   --earth-900: #FFFFFF;
-  --earth-800: #F5EAE8;
-  --earth-600: #D1BEBB;
-  --earth-400: #A89592;
-  --earth-200: #42302E;
-  --earth-100: #2C1F1E;
+  --earth-800: #E5E5E5;
+  --earth-600: #B0B0B0;
+  --earth-400: #808080;
+  --earth-200: #333333;
+  --earth-100: #222222;
 
-  /* Bordes y Sombras en Modo Oscuro */
-  --border-light: rgba(240, 140, 160, 0.22);
-  --border-card: rgba(255, 255, 255, 0.1);
-  --border-subtle: #2C1F1E;
+  /* Bordes */
+  --border-light: rgba(206, 101, 124, 0.25);
+  --border-card: #2A2A2A;
+  --border-subtle: #222222;
 
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
-  --shadow-hover: 0 20px 48px rgba(243, 114, 141, 0.25);
+  --shadow-hover: 0 20px 48px rgba(206, 101, 124, 0.2);
 }
 
-/* En modo oscuro, el body usa fondo sólido oscuro sin gradientes claros */
+/* En modo oscuro, fondo sólido negro sin gradientes claros */
 [data-theme="dark"] body {
-  background-color: var(--bg-cream) !important;
+  background-color: #0B0B0B !important;
   background-image: none !important;
 }
 
@@ -128,8 +131,8 @@
   display: none !important;
 }
 
-/* Las imágenes NUNCA se filtran ni se lavan */
-img, .gallery-item img, .product-img-wrap img, .about-image-wrapper img, .hero-main-card img, .hero-floating-card img {
+/* Las imágenes NUNCA se alteran */
+img {
   filter: none !important;
   opacity: 1 !important;
 }
@@ -138,11 +141,11 @@ img, .gallery-item img, .product-img-wrap img, .about-image-wrapper img, .hero-m
 body, .site-header, .navbar, .about-section, .featured-section, .custom-order-section,
 .category-card, .product-card, .pillar-card, .channel-card, .faq-box, .order-modal-dialog,
 .hero-floating-pill, .hero-logo-badge, .about-stamp, .filter-btn, .btn-secondary,
-.order-form-control, .site-footer {
-  transition: background-color 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+.order-form-control, .site-footer, .nav-links {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Reset y configuraciones base */
+/* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -161,23 +164,14 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
   position: relative;
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(247, 226, 229, 0.45) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(226, 234, 224, 0.5) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(250, 247, 242, 0.8) 0%, transparent 100%);
-  background-attachment: fixed;
 }
 
-/* Patrón de textura artesanal sutil para modo claro */
+/* Textura artesanal sutil — solo modo claro */
 body::before {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: radial-gradient(rgba(107, 87, 84, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-  pointer-events: none;
-  z-index: -1;
-}
+  background-image: radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px);
   background-size: 24px 24px;
   pointer-events: none;
   z-index: -1;
@@ -385,7 +379,7 @@ section {
   height: 42px;
   border-radius: 50%;
   background: var(--bg-card-solid);
-  border: 1.5px solid var(--border-light);
+  border: 1.5px solid var(--border-card);
   color: var(--earth-900);
   display: inline-flex;
   align-items: center;
@@ -510,7 +504,7 @@ section {
   align-items: center;
   gap: 0.75rem;
   background: var(--bg-card-solid);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   padding: 0.4rem 1.1rem 0.4rem 0.5rem;
   border-radius: var(--radius-full);
   box-shadow: var(--shadow-sm);
@@ -541,11 +535,10 @@ section {
   display: inline-block;
   font-style: italic;
   font-weight: 600;
-  color: #A3334E;
+  color: var(--rose-500);
   background: linear-gradient(135deg, #962842 0%, #C44362 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 1px 1px rgba(163, 51, 78, 0.15));
 }
 
 .hero-subtitle {

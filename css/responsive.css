@@ -91,7 +91,7 @@
     display: flex;
   }
 
-  /* Menú desplegable lateral para móviles */
+  /* Panel del menú lateral — sólido, opaco, negro o blanco según tema */
   .nav-links {
     position: fixed;
     top: 0;
@@ -120,7 +120,7 @@
   }
 
   .nav-actions .btn {
-    display: none; /* Ocultar el botón grande de pedido en navbar móvil */
+    display: none;
   }
 
   .mobile-theme-item {
@@ -139,7 +139,7 @@
     padding: 0.75rem 1rem;
     border-radius: var(--radius-md);
     background: var(--bg-cream-soft);
-    border: 1.5px solid var(--border-light);
+    border: 1.5px solid var(--border-card);
     color: var(--earth-900);
     font-size: 0.95rem;
     font-weight: 600;
@@ -152,7 +152,7 @@
     border-color: var(--rose-400);
   }
 
-  /* Menú overlay semitransparente completamente NÍTIDO (sin blur) */
+  /* Overlay INDEPENDIENTE detrás del menú — solo oscurece, SIN blur */
   .mobile-nav-backdrop {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;

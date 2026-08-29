@@ -8,7 +8,7 @@
 .about-section {
   background: var(--bg-section-alt);
   border-top: 1px solid var(--border-card);
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-card);
 }
 
 .about-grid {
@@ -50,7 +50,7 @@
   padding: 1.25rem;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  border: 2px solid var(--border-light);
+  border: 2px solid var(--border-card);
   text-align: center;
   max-width: 180px;
 }
@@ -135,7 +135,7 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   transition: all var(--transition-bounce);
   cursor: pointer;
   display: flex;
@@ -181,7 +181,7 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: var(--bg-card);
+  background: var(--bg-card-solid);
   border: 1px solid var(--border-card);
   display: flex;
   align-items: center;
@@ -282,14 +282,14 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background: var(--bg-card);
+  background: var(--bg-card-solid);
   color: var(--rose-600);
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-full);
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -431,7 +431,7 @@
 .gallery-hover-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to top, rgba(46, 35, 34, 0.75) 0%, rgba(46, 35, 34, 0.1) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -448,8 +448,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--earth-900);
+  background: #FFFFFF;
+  color: #1A1A1A;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -481,15 +481,12 @@
 /* ==========================================================================
    5. SECCIÓN CREACIONES PERSONALIZADAS (CALLOUT)
    ========================================================================== */
-/* ==========================================================================
-   5. SECCIÓN CREACIONES PERSONALIZADAS (CALLOUT)
-   ========================================================================== */
 .custom-order-section {
   background: var(--bg-custom-callout);
   border-radius: var(--radius-xl);
   padding: 4.5rem 3.5rem;
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-card);
   position: relative;
   overflow: hidden;
   margin: 3rem auto;
@@ -620,7 +617,7 @@
 
 .channel-card.channel-ig:hover {
   border-color: #E1306C;
-  background: rgba(225, 48, 108, 0.08);
+  background: rgba(225, 48, 108, 0.06);
   box-shadow: 0 8px 24px rgba(225, 48, 108, 0.14);
 }
 
@@ -631,7 +628,7 @@
 
 .channel-card.channel-wa:hover {
   border-color: #25D366;
-  background: rgba(37, 211, 102, 0.08);
+  background: rgba(37, 211, 102, 0.06);
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.14);
 }
 
@@ -642,7 +639,7 @@
 
 .channel-card.channel-fb:hover {
   border-color: #1877F2;
-  background: rgba(24, 119, 242, 0.08);
+  background: rgba(24, 119, 242, 0.06);
   box-shadow: 0 8px 24px rgba(24, 119, 242, 0.14);
 }
 
@@ -757,8 +754,8 @@
    7. FOOTER
    ========================================================================== */
 .site-footer {
-  background: #181212;
-  color: #FAF7F2;
+  background: #0A0A0A;
+  color: #E5E5E5;
   padding: 4.5rem 0 2rem 0;
   border-top: 4px solid var(--rose-500);
   position: relative;
@@ -786,7 +783,7 @@
 }
 
 .footer-brand p.tagline {
-  color: var(--rose-200);
+  color: var(--rose-400);
   font-style: italic;
   font-family: var(--font-serif);
   font-size: 1.05rem;
@@ -795,7 +792,7 @@
 
 .footer-brand p.desc {
   font-size: 0.9rem;
-  color: var(--earth-200);
+  color: #B0B0B0;
   line-height: 1.6;
   max-width: 340px;
 }
@@ -826,13 +823,13 @@
 }
 
 .footer-links a {
-  color: var(--earth-200);
+  color: #B0B0B0;
   font-size: 0.9rem;
   transition: color var(--transition-fast), padding-left var(--transition-fast);
 }
 
 .footer-links a:hover {
-  color: var(--rose-200);
+  color: var(--rose-400);
   padding-left: 5px;
 }
 
@@ -842,7 +839,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 0.85rem;
-  color: var(--earth-400);
+  color: #808080;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -919,7 +916,7 @@
 
 .lightbox-meta {
   font-size: 0.85rem;
-  color: var(--rose-200);
+  color: var(--rose-400);
 }
 
 .lightbox-close-btn {
