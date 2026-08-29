@@ -479,7 +479,7 @@ section {
    HERO / PORTADA
    ========================================================================== */
 .hero-section {
-  padding-top: 8.5rem;
+  padding-top: 7rem;
   padding-bottom: 5.5rem;
   position: relative;
   overflow: hidden;
@@ -487,7 +487,7 @@ section {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 3.5rem;
   align-items: center;
 }
