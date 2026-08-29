@@ -1,17 +1,13 @@
 /**
  * CARI CROCHET - Controlador Principal
- * Efectos de navegación, menú móvil, acordeón, animaciones y Modo Oscuro/Claro
+ * Efectos de navegación, acordeón, animaciones y Modo Oscuro/Claro
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
-  const mobileToggle = document.querySelector('.mobile-menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  const backdrop = document.querySelector('.mobile-nav-backdrop');
   const navLinksItems = document.querySelectorAll('.nav-link');
   const faqItems = document.querySelectorAll('.faq-item');
   const themeToggle = document.getElementById('themeToggle');
-  const mobileThemeToggle = document.getElementById('mobileThemeToggle');
 
   // ==========================================================================
   // 1. GESTOR DE TEMA (MODO OSCURO / CLARO) CON LOCALSTORAGE
@@ -26,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (theme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('cari_theme', 'dark');
-      updateThemeUI('☀️', 'Modo Claro');
+      updateThemeIcon('☀️');
     } else {
       document.documentElement.removeAttribute('data-theme');
       localStorage.setItem('cari_theme', 'light');
-      updateThemeUI('🌙', 'Modo Oscuro');
+      updateThemeIcon('🌙');
     }
   }
 
@@ -39,21 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme(isDark ? 'light' : 'dark');
   }
 
-  function updateThemeUI(icon, text) {
+  function updateThemeIcon(icon) {
     if (themeToggle) {
       const iconEl = themeToggle.querySelector('.theme-icon');
       if (iconEl) iconEl.textContent = icon;
     }
-    if (mobileThemeToggle) {
-      const mIconEl = mobileThemeToggle.querySelector('.theme-icon');
-      const mTextEl = mobileThemeToggle.querySelector('.theme-label');
-      if (mIconEl) mIconEl.textContent = icon;
-      if (mTextEl) mTextEl.textContent = text;
-    }
   }
 
   if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
-  if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
 
   // ==========================================================================
   // 2. EFECTO SCROLL EN HEADER
@@ -67,43 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 3. MENÚ MÓVIL (SÓLIDO, NÍTIDO Y SIN BLUR DE FONDO)
-  // ==========================================================================
-  if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.contains('open');
-      if (isOpen) {
-        closeMobileMenu();
-      } else {
-        openMobileMenu();
-      }
-    });
-
-    if (backdrop) {
-      backdrop.addEventListener('click', closeMobileMenu);
-    }
-
-    navLinksItems.forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-  }
-
-  function openMobileMenu() {
-    mobileToggle.classList.add('active');
-    navLinks.classList.add('open');
-    if (backdrop) backdrop.classList.add('open');
-    document.body.style.overflow = 'hidden'; // Bloquear scroll de fondo
-  }
-
-  function closeMobileMenu() {
-    if (mobileToggle) mobileToggle.classList.remove('active');
-    if (navLinks) navLinks.classList.remove('open');
-    if (backdrop) backdrop.classList.remove('open');
-    document.body.style.overflow = ''; // Restaurar scroll
-  }
-
-  // ==========================================================================
-  // 4. ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)
+  // 3. ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)
   // ==========================================================================
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
@@ -117,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 5. SCROLL SUAVE Y ENLACE ACTIVO EN NAVEGACIÓN
+  // 4. SCROLL SUAVE Y ENLACE ACTIVO EN NAVEGACIÓN
   // ==========================================================================
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
@@ -141,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 6. ANIMACIÓN DE REVELACIÓN SUAVE AL HACER SCROLL
+  // 5. ANIMACIÓN DE REVELACIÓN SUAVE AL HACER SCROLL
   // ==========================================================================
   const observerOptions = {
     root: null,
